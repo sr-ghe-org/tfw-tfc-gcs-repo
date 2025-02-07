@@ -34,6 +34,8 @@ module "gcp_pci_buckets" {
   storage_class              = each.value.storage_class
   autoclass                  = each.value.autoclass
   iam_members                = each.value.iam_members
+  retention_policy           = each.value.retention_policy
+  lifecycle_rules            = each.value.lifecycle_rules
   force_destroy              = each.value.force_destroy
   public_access_prevention   = "enforced"
   soft_delete_policy         = each.value.soft_delete_policy
