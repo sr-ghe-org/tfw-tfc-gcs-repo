@@ -4,7 +4,7 @@ variable "gcp_non_pci_bucket" {
     project_number     = optional(string)
     bucket_name_prefix = string
     regions            = list(string)
-    versioning         = optional(bool, true)
+    versioning         = optional(bool, false)
     labels             = optional(map(string), {})
     storage_class      = optional(string, "STANDARD")
     autoclass          = optional(bool, false)
@@ -42,7 +42,7 @@ variable "gcp_pci_bucket" {
     project_number     = optional(string)
     bucket_name_prefix = string
     regions            = list(string)
-    versioning         = optional(bool, true)
+    versioning         = optional(bool, false)
     labels             = optional(map(string), {})
     storage_class      = optional(string, "STANDARD")
     autoclass          = optional(bool, false)
